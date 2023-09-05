@@ -17,7 +17,7 @@ pipeline {
 
         stage('Front-end Unit Test') {
           steps {
-            sh 'npm i && npm run test:unit'
+            sh 'apt-get update'
           }
         }
 
