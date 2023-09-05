@@ -1,26 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('chekout code') {
+    stage('step 1') {
       steps {
         git(url: 'https://github.com/Oinilp/test.git', branch: 'main')
-      }
-    }
-
-    stage('Log') {
-      parallel {
-        stage('Log') {
-          steps {
-            sh 'ls -al'
-          }
-        }
-
-        stage('Front-end Unit Test') {
-          steps {
-            sh 'npm install && npm run start'
-          }
-        }
-
       }
     }
 
