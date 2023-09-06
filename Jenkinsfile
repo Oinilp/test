@@ -17,7 +17,7 @@ pipeline {
 
         stage('test') {
           steps {
-            sh 'npm install && npm run start && sleep 15 && exit'
+            sh 'npm install && npm run start && sleep 15 && exit 0'
           }
         }
 
